@@ -23,7 +23,14 @@ $ celery -A celery_django worker -l INFO
 ## todo
 - [ ] consumer only celery worker
 - [ ] multi broker celery structure
-- [ ] 
+
+## test list
+1. how does celery communicate with django server when physically apart from each other?
+  - django setting에 작성하는 broker_url을 통해서 물리적으로 떨어져있더라도, celery가 django 관련 task를 진행할 수 있다. (ex. django model CRUD)
+  - 이를 확인하기 위해서는, rabbitmq를 하나 띄우고, 서로 떨어진 프로세스로 django와 celery를 동작시킨 다음, django model reference가 sync되는지를 확인한다.
+2. celery를 consumer worker로만 사용하고 싶으면 어떻게 동작 시켜야 하는가?
+3. celery를 multiple apps로 사용(ex multiple broker_url)하려면 어떤 명령어로 실행시켜야 할까?
+
 
 
 ## refs

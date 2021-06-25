@@ -1,5 +1,5 @@
-from django.db import models  # noqa
+from django.db import models
 
 
-class Widget(models.Model):
-    name = models.CharField(max_length=140)
+class Member(models.Model):
+    is_member_withdrawn = models.BooleanField('is_member_withdrawn', help_text="동의한 멤버 탈퇴 여부", default=False)
