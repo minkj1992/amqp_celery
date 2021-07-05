@@ -11,5 +11,17 @@ services:
       RABBITMQ_DEFAULT_PASS: "admin"
     volumes:
       - "rabbitmq_data:/data"
+  rabbitmq2:
+    image: "rabbitmq:3-management"
+    container_name: rabbitmq2
+    ports:
+      - "5671:5672"
+      - "15671:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "admin"
+      RABBITMQ_DEFAULT_PASS: "admin"
+    volumes:
+      - "rabbitmq_data2:/data"
 volumes:
   rabbitmq_data:
+  rabbitmq_data2:

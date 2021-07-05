@@ -16,7 +16,9 @@ $ django-admin startproject celery_django .
 $ django-admin startapp demoapp
 $ python manage.py makemigrations
 $ python manage.py migrate
-$ celery -A celery_django worker -l INFO
+
+$ sh run.sh 1
+$ sh run.sh 2
 ```
 
 
