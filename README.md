@@ -23,8 +23,11 @@ $ sh run.sh 2
 
 
 ## todo
-- [ ] consumer only celery worker
-- [ ] multi broker celery structure
+- [x] consumer only celery worker
+- [x] multi broker celery structure
+- [x] celery to another celery send_task with db transaction
+- [ ] celery test with mocking rabbitmq & celery app
+- [ ] celery stress test 
 
 ## test list
 1. how does celery communicate with django server when physically apart from each other?
